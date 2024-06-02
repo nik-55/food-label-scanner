@@ -1,16 +1,7 @@
-import google.generativeai as genai
 import PIL
 import requests
-import dotenv
-import os
-
 from system_prompt import prompt
-
-dotenv.load_dotenv()
-
-API_KEY = os.getenv("API_KEY")
-genai.configure(api_key=API_KEY)
-
+from gemini import genai
 
 model = genai.GenerativeModel("models/gemini-pro-vision")
 
